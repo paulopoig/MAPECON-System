@@ -1,7 +1,12 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const pool = require('./db');
+const pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+        rejectUnauthorized: false // Supabase requires this so hackers can't intercept the data!
+    }
+});
 
 // NEW: Import our security tools
 const bcrypt = require('bcrypt'); 
