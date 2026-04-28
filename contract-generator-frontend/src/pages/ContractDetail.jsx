@@ -12,7 +12,7 @@ export default function ContractDetail() {
         const fetchDetails = async () => {
             try {
                 const token = localStorage.getItem('mapeconToken');
-                const response = await axios.get(`http://localhost:5000/api/contracts/${id}`, {
+                const response = await axios.get(`https://mapecon-backend.onrender.com/api/contracts/${id}`, {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 setContract(response.data);

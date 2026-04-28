@@ -68,7 +68,7 @@ export default function Dashboard() {
                 : [];
 
             // Send the Axios POST request with ALL the new fields!
-            const response = await axios.post('http://localhost:5000/api/contracts', {
+            const response = await axios.post('https://mapecon-backend.onrender.com/api/contracts', {
                 account_type: accountType,
                 classification: classification,
                 customer_name: formattedName,

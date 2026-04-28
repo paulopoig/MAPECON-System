@@ -16,7 +16,7 @@ export default function Login() {
         
         try {
             // We use Axios (our messenger) to send the email and password to our Node server
-            const response = await axios.post('http://localhost:5000/api/login', {
+            const response = await axios.post('https://mapecon-backend.onrender.com/api/login', {
                 email: email,
                 password: password
             });
